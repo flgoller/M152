@@ -1,61 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F2E3D5;
+}
 
+section {
+    padding: 20px;
+    min-height: 100vh;
+}
 
-h1{
+h1 {
+    font-size: 55px;
+    font-family: 'Smooch Sans', sans-serif;
+    margin: 0px;
+    margin-bottom: 5px;
+    color: #53736A;
+}
+
+h2 {
     font-size: 45px;
     font-family: 'Smooch Sans', sans-serif;
     margin: 0px;
     margin-bottom: 5px;
 }
 
-h2{
+h3 {
     font-size: 35px;
     font-family: 'Smooch Sans', sans-serif;
     margin: 0px;
     margin-bottom: 5px;
 }
 
-h3{
-    font-size: 25px;
-    font-family: 'Smooch Sans', sans-serif;
-    margin: 0px;
-    margin-bottom: 5px;
-}
-
-p{
+p,
+a {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
     margin-bottom: 5px;
 }
 
-hr{
+hr {
     margin: 30px 0;
 }
 
-.colorDescription{
+.colorDescription {
     display: grid;
-    grid-template-columns: 150px 100px auto;
+    grid-template-columns: 150px 150px auto;
     grid-gap: 10px;
+    margin-bottom: 10px;
 }
 
-.colorBox{
+.colorBox {
     height: 75px;
     width: 100%;
+    border: solid black 2px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-.colorBox p{
+.colorBox p {
     color: white;
 }
 
-#main-color{
+#main-color {
     background-color: #53736A;
 }
 
-#background-color{
-    background-color: #C2C0A6;
+#background-color {
+    background-color: #F2E3D5;
 }
 
-#nav-color{
+#nav-color {
     background-color: #024554;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #121315;
+    color: #a7a7a7;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    height: 50px;
+}
+
+.copyright {
+    background-color: #25262e;
+}
+
+.footer-menu {}
+
+.footer-menu a {
+    color: #cfd2d6;
+    padding: 6px;
+    text-decoration: none;
+}
+
+.footer-menu a:hover {
+    color: #53736A;
+}
+
+footer p,
+footer a {
+    margin: 0;
 }
