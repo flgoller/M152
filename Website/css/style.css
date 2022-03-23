@@ -64,6 +64,18 @@ hr {
     color: white;
 }
 
+.iconSmall {
+    font-size: 25px; color: #53736A;
+}
+
+.iconNormal {
+    font-size: 35px; color: #53736A;
+}
+
+.iconBig {
+    font-size: 45px; color: #53736A;
+}
+
 #main-color {
     background-color: #53736A;
 }
