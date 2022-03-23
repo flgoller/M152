@@ -10,47 +10,19 @@
     <link rel="stylesheet" href="css/nav.css">
     </link>
     <script src="https://kit.fontawesome.com/adf27c4851.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 
 <body>
-    <nav>
-        <img src="img/logo.png" alt="" onclick=" window.location = '/index.html';">
-
-        <div class="subnav">
-            <button class="subnavbtn">Konzept <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="/styleguide.html">Designsystem</a>
-                <a href="#team">Webseitenkonzept</a>
-                <a href="/sitemap.html">Sitemap</a>
-                <a href="#careers">Reflextion</a>
-            </div>
-        </div>
-        <div class="subnav">
-            <button class="subnavbtn">Multimedia <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="#bring">Videoformate</a>
-                <a href="#deliver">Bildformate</a>
-                <a href="#package">Audioformate</a>
-                <a href="#express">Film</a>
-            </div>
-        </div>
-        <div class="subnav">
-            <button class="subnavbtn">Animationen <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="#link1">Css-Animationen</a>
-                <a href="#link2">MultiGifs</a>
-            </div>
-        </div>
-        <div class="subnav">
-            <button class="subnavbtn">Datenschutz <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="#link1">Impressum</a>
-                <a href="#link2">Urheberrecht</a>
-            </div>
-        </div>
-        <a href="#contact">Galerie</a>
-    </nav>
-
+    <div id="header"></div>
     <section>
         <h1>Designsytem</h1>
 
@@ -106,7 +78,8 @@
         <br>
         <br>
         <h3>Icons</h3>
-        <p>Für die Icons verwenden wir Font-Awesome: <a href="https://fontawesome.com/icons">https://fontawesome.com/icons</a></p>
+        <p>Für die Icons verwenden wir Font-Awesome: <a
+                href="https://fontawesome.com/icons">https://fontawesome.com/icons</a></p>
         <span class="iconSmall">
             <i class="fa fa-camera"></i> <i style="margin-left: 20px;" class="fa fa-circle-nodes"></i>
         </span>
@@ -160,14 +133,7 @@
         <button>Button</button>
     </section>
 
-    <footer>
-        <p>Copyright &copy; 2022 Website2Go</p>
-
-        <div class="footer-menu">
-            <a href="/impressum.html">Impressum</a>
-            <a href="">Datenschutz</a>
-        </div>
-    </footer>
+    <div id="footer"></div>
 </body>
 
 </html>
