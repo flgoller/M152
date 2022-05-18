@@ -1,0 +1,38 @@
+#transformBox {
+    background-color: blue;
+    color: white;
+    left: 50px;
+    width: 20px;
+    height: 50px;
+    padding: 20px 10px 0px 20px;
+    
+}
+
+#transformBox:hover{
+    transform: rotate(90deg);
+    transition: 10s;
+    background-color: red;
+}
+
+#keyframebox {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: bewegung;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bewegung {
+    0% { background-color:red; left:0px;
+   top:0px; }
+    25% { background-color:yellow; left:200px;
+   top:0px; }
+    50% { background-color:blue; left:200px;
+   top:200px; }
+    75% { background-color:green; left:0px;
+   top:200px; }
+    100% { background-color:red; left:0px;
+   top:0px; }
+   }
