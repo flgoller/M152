@@ -5,10 +5,10 @@
     width: 20px;
     height: 50px;
     padding: 20px 10px 0px 20px;
-    
+
 }
 
-#transformBox:hover{
+#transformBox:hover {
     transform: rotate(90deg);
     transition: 10s;
     background-color: red;
@@ -25,14 +25,61 @@
 }
 
 @keyframes bewegung {
-    0% { background-color:red; left:0px;
-   top:0px; }
-    25% { background-color:yellow; left:200px;
-   top:0px; }
-    50% { background-color:blue; left:200px;
-   top:200px; }
-    75% { background-color:green; left:0px;
-   top:200px; }
-    100% { background-color:red; left:0px;
-   top:0px; }
-   }
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+#box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://picsum.photos/1080/720");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
+#box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://picsum.photos/1080/721");
+    background-size: cover;
+    display: table;
+    background-attachment: local;
+}
+
+#box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://picsum.photos/1080/722");
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+}
+
