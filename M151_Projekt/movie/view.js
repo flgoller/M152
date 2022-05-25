@@ -18,11 +18,12 @@ export function render(movies) {
         <tr>
           <td>${movie.id}</td>
           <td>${movie.title}</td>
+          <td>☆ ★</td>
           <td><a href="/movie/delete/${movie.id}">löschen</a></td>
           <td><a href="/movie/form/${movie.id}">bearbeiten</a></td> 
-        </tr>`,
+        </tr>`
         )
-        .join('')}
+        .join("")}
     </tbody>
   </table>
   <a href="/movie/form">neu</a>
