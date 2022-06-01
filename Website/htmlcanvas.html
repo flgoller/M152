@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    </link>
+    <script src="https://kit.fontawesome.com/adf27c4851.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section>
+        <h1>Html-Canvas</h1>
+
+        <canvas id="canvas" width="300" height="500" />
+
+        <script>
+            function zeichne() {
+                let ctx = cv.getContext("2d");
+                ctx.fillStyle = "red";
+                ctx.beginPath();
+                ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+                ctx.arc(25, 25, 10, 0, 2 * Math.PI);
+                ctx.arc(75, 25, 10, 0, 2 * Math.PI);
+
+                var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "white");
+
+                ctx.fillStyle = grd;
+                ctx.fillRect(0, 0, 100, 100);
+                ctx.stroke();
+
+
+            }
+
+            let cv = document.getElementById("canvas");
+            if (cv.getContext) {
+                zeichne();
+            } else {
+                alert("Canvas wird von diesem Browser nicht unterstützt.");
+            }
+        </script>
+    </section>
+    <div id="footer"></div>
+</body>
+
+</html>
