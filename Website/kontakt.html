@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    </link>
+    <script src="https://kit.fontawesome.com/adf27c4851.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <section>
+        <h1>Kontakt</h1>
+        <form action="">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label for="message">Nachricht</label>
+            <textarea name="message" id="message"></textarea>
+
+            <button type="submit">Abschicken</button>
+        </form>
+    </section>
+    <div id="footer"></div>
+</body>
+
+</html>
