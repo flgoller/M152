@@ -31,12 +31,28 @@
 
     <section>
         <h1>Webseite2Go</h1>
-
         <img src="img/main.jpg" style="width: 100%;" alt="">
+        <p id="autoText"></p>
     </section>
 
     <div id="footer"></div>
+    <script>
+        const text = "Herzlich Willkommen auf der besten Webseite der Galaxy :)";
 
+        let index = 0;
+
+        function writeText() {
+            document.getElementById("autoText").innerText = text.slice(0, index);
+
+            index++;
+
+            if (index > text.length) {
+                index = 0;
+            }
+        }
+
+        setInterval(writeText, 100);
+    </script>
     <script type="text/javascript" cookie-consent="tracking">
         console.log("tracking");
     </script>
