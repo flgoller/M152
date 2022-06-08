@@ -54,6 +54,15 @@ hr {
     grid-gap: 10px;
     margin-bottom: 10px;
 }
+@media (max-width: 800px) {
+	.colorDescription {
+        grid-template-columns: auto;
+    }
+
+    #maingrid{
+        width: 100%;
+    }
+}
 
 .colorBox {
     height: 75px;
