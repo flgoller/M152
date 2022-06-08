@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    </link>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+    <script>
+
+    </script>
+    <script src="https://kit.fontawesome.com/adf27c4851.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section>
+        <h1>Testing</h1>
+        <h2>Mobile & Desktop</h2>
+        <table>
+            <tr>
+                <th>Testbeschrieb</th>
+                <th>Erwartetes Ergebnis</th>
+                <th>Eingetroffenes Ergebnis</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Unter Animationen die Seite CSS-Parallax öffnen
+                        </li>
+                        <li>
+                           Runterscrollen
+                        </li>
+                    </ul>
+                </td>
+                <td>Beim runterscrollen bewegt sich das oberere Bild über das untere.</td>
+                <td>Erwartetes Ergebnis ist eingetroffen</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Unter Animationen die Seite CSS-Transformation öffnen
+                        </li>
+                        <li>
+                           Die Maus über das Hover-Quadrat platzieren
+                        </li>
+                    </ul>
+                </td>
+                <td>Das Hover-Quadrat dreht sich um 180 Grad mit dem Uhrzeigersinn und wird rot.</td>
+                <td>Erwartetes Ergebnis ist eingetroffen</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Unter Multimedia die Seite Video-Formate öffnen
+                        </li>
+                        <li>
+                           Das zweite Video abspielen
+                        </li>
+                    </ul>
+                </td>
+                <td>Das zweite Video kann ohne Probleme abgespielt werden.</td>
+                <td>Erwartetes Ergebnis ist eingetroffen</td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>
+                            Unter Konzept die Seite Reflexion öffnen
+                        </li>
+                        <li>
+                           Den Browser auf ein Handyformat wechseln
+                        </li>
+                    </ul>
+                </td>
+                <td>Der ganze Text der Seite wird korrekt und schön dargestellt, um Handybenutzer zu berücksichtigen.</td>
+                <td>Erwartetes Ergebnis ist eingetroffen</td>
+            </tr>
+        </table>
+        <br>
+        <h2>Browserkompatibilität</h2>
+        <table>
+            <tr>
+                <th>Browser</th>
+                <th>Screenshot</th>
+            </tr>
+            <tr>
+                <td>Google Chrom</td>
+                <td><img width="500px" src="img/chrom.PNG"></td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td><img width="500px" src="img/firefox.PNG"></td>
+            </tr>
+            <tr>
+                <td>Edge</td>
+                <td><img width="500px" src="img/edge.PNG"></td>
+            </tr>
+        </table>
+    </section>
+
+    <div id="footer"></div>
+    <script type="text/javascript" cookie-consent="tracking">
+        console.log("tracking");
+    </script>
+    <script type="text/plain" cookie-consent="strictly-necessary">
+        console.log("strictly-necessary");
+    </script>
+</body>
+
+</html>
