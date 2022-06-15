@@ -18,7 +18,24 @@ export function render(movies) {
         <tr>
           <td>${movie.id}</td>
           <td>${movie.title}</td>
-          <td>☆ ★</td>
+          <td>
+          <a href="/movie/rate/1/${movie.id}">${
+            movie.rating >= 1 ? "★" : "☆"
+          }</a>
+          <a href="/movie/rate/2/${movie.id}">${
+            movie.rating >= 2 ? "★" : "☆"
+          }</a>
+          <a href="/movie/rate/3/${movie.id}">${
+            movie.rating >= 3 ? "★" : "☆"
+          }</a>
+          <a href="/movie/rate/4/${movie.id}">${
+            movie.rating >= 4 ? "★" : "☆"
+          }</a>
+          <a href="/movie/rate/5/${movie.id}">${
+            movie.rating >= 5 ? "★" : "☆"
+          }</a>
+          </td>
+          <td>${movie.avgRating}</td>
           <td><a href="/movie/delete/${movie.id}">löschen</a></td>
           <td><a href="/movie/form/${movie.id}">bearbeiten</a></td> 
         </tr>`

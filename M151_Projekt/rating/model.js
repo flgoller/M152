@@ -10,43 +10,22 @@ const connection = await mysql.createConnection({
 
 await connection.connect();
 
-export async function getAll(userid) {
-  const query = "SELECT * FROM Movies WHERE user = ? OR public = 1";
-  const [data] = await connection.query(query, [userid]);
+export async function getAVGRatingByMovie(movieId) {
+  const query = "SELECT AVG(rating) as avg FROM Ratings WHERE movie = ?";
+  const [data] = await connection.query(query, [movieId]);
 
-  return data;
+  return data.pop().avg;
 }
 
-async function insert(movie, userid) {
-  const query =
-    "INSERT INTO Movies (title, year, public, user) VALUES (?, ?, ?, ?)";
-  const [result] = await connection.query(query, [
-    movie.title,
-    movie.year,
-    movie.public,
-    userid,
-  ]);
-  return { ...movie, id: result.insertId };
-}
+export async function getRate(userId, movieId) {
+  const query = "SELECT * FROM Ratings WHERE user = ? AND movie = ?";
+  const [data] = await connection.query(query, [userId, movieId]);
+  const rating = data.pop();
 
-async function update(movie, userid) {
-  const query =
-    "UPDATE Movies SET title = ?, year = ?, public = ?, user = ? WHERE id = ?";
-  await connection.query(query, [
-    movie.title,
-    movie.year,
-    movie.public,
-    userid,
-    movie.id,
-  ]);
-  return movie;
-}
-
-export async function getRate(rating) {
-  const query = "SELECT * FROM Ratings WHERE userId = ? AND movieId = ?";
-  const [data] = await connection.query(query, [rating.userId, rating.movieId]);
-
-  return data.pop();
+  if (rating == undefined) {
+    return 0;
+  }
+  return rating.rating;
 }
 
 export async function insertRate(rating) {
@@ -57,17 +36,27 @@ export async function insertRate(rating) {
 }
 
 export async function updateRate(rating) {
-  const query =
-    "UPDATE Ratings SET rating = ? WHERE userId = ? AND movieId = ?";
+  const query = "UPDATE Ratings SET rating = ? WHERE user = ? AND movie = ?";
   await connection.query(query, [rating.rating, rating.userId, rating.movieId]);
 
   return;
 }
 
-export async function saveRate(rating, userId) {
-  if (!getRate(rating)) {
+export async function removeRatingByMovie(movieId) {
+  const query = "DELETE FROM Ratings WHERE movie = ?";
+  await connection.query(query, [movieId]);
+
+  return;
+}
+
+export async function saveRate(rating) {
+  console.log(rating);
+  const a = await getRate(rating.userId, parseInt(rating.movieId));
+  console.log(a);
+  if (a == 0) {
     return insertRate(rating);
   } else {
+    console.log("test");
     return updateRate(rating);
   }
 }

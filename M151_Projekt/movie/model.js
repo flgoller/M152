@@ -50,10 +50,15 @@ export async function get(id) {
 }
 
 export async function remove(id, userid) {
-  const movie = get(id);
+  const movie = await get(id);
+  console.log(movie);
   if (movie.user == userid || movie.public) {
+    console.log("remove");
     const query = "DELETE FROM Movies WHERE id = ?";
     await connection.query(query, [id]);
+
+    const deleteQuery = "DELETE FROM Ratings WHERE movie = ?";
+    await connection.query(deleteQuery, [id]);
   }
   return;
 }
