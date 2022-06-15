@@ -51,9 +51,8 @@ export async function get(id) {
 
 export async function remove(id, userid) {
   const movie = await get(id);
-  console.log(movie);
+
   if (movie.user == userid || movie.public) {
-    console.log("remove");
     const query = "DELETE FROM Movies WHERE id = ?";
     await connection.query(query, [id]);
 

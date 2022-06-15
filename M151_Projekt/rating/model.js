@@ -50,13 +50,10 @@ export async function removeRatingByMovie(movieId) {
 }
 
 export async function saveRate(rating) {
-  console.log(rating);
-  const a = await getRate(rating.userId, parseInt(rating.movieId));
-  console.log(a);
-  if (a == 0) {
+  const rate = await getRate(rating.userId, parseInt(rating.movieId));
+  if (rate == 0) {
     return insertRate(rating);
   } else {
-    console.log("test");
     return updateRate(rating);
   }
 }

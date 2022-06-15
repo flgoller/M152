@@ -28,8 +28,6 @@ export async function formAction(request, response) {
     movie = await get(parseInt(request.params.id, 10));
   }
 
-  console.log(movie);
-
   const body = form(movie);
   response.send(body);
 }
@@ -54,6 +52,9 @@ export async function saveRatingAction(request, response) {
     rating: request.params.rating,
   };
 
-  await saveRate(rating);
+  if (rating.rating >= 1 && rating.rating <= 5) {
+    await saveRate(rating);
+  }
+
   response.redirect(request.baseUrl);
 }
